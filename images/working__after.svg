@@ -1,0 +1,24 @@
+<svg width="175" height="147" viewBox="0 0 175 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector Pettern">
+<path id="Star 9" d="M134.323 -6.10352e-05L134.613 10.5107C134.86 19.4718 142.067 26.678 151.028 26.9254L161.538 27.2157L151.028 27.5059C142.067 27.7533 134.86 34.9595 134.613 43.9206L134.323 54.4314L134.032 43.9207C133.785 34.9595 126.579 27.7533 117.618 27.5059L107.107 27.2157L117.618 26.9254C126.579 26.678 133.785 19.4718 134.032 10.5107L134.323 -6.10352e-05Z" fill="url(#paint0_linear_19_388)"/>
+<path id="Star 10" d="M161.538 42.7255L161.682 47.9244C161.804 52.3568 165.369 55.9211 169.801 56.0435L175 56.1871L169.801 56.3306C165.369 56.453 161.804 60.0174 161.682 64.4497L161.538 69.6486L161.395 64.4497C161.272 60.0174 157.708 56.453 153.276 56.3306L148.077 56.1871L153.276 56.0435C157.708 55.9211 161.272 52.3568 161.395 47.9244L161.538 42.7255Z" fill="url(#paint1_linear_19_388)"/>
+<g id="Group 5">
+<circle id="Ellipse 30" cx="51.7977" cy="91.0116" r="51.2124" stroke="url(#paint2_linear_19_388)" stroke-width="1.17057"/>
+<circle id="Ellipse 33" cx="86.9147" cy="94.5236" r="51.2124" stroke="white" stroke-width="1.17057"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_19_388" x1="107.107" y1="-6.10352e-05" x2="161.538" y2="54.4314" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CAEE0"/>
+<stop offset="1" stop-color="#C23DF5"/>
+</linearGradient>
+<linearGradient id="paint1_linear_19_388" x1="148.077" y1="42.7255" x2="175" y2="69.6486" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CAEE0"/>
+<stop offset="1" stop-color="#C23DF5"/>
+</linearGradient>
+<linearGradient id="paint2_linear_19_388" x1="0" y1="39.2139" x2="103.595" y2="142.809" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CAEE0"/>
+<stop offset="1" stop-color="#C23DF5"/>
+</linearGradient>
+</defs>
+</svg>

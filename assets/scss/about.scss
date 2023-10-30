@@ -1,0 +1,169 @@
+// MAIN
+@import "./mixins";
+@import "./normalize";
+@import "./variables";
+/* Start here STYLES FOR ABOUT page */
+
+.about {
+  @include pageBanner();
+}
+
+.delivery {
+  margin: 80px 0;
+  @include flex(flex-start, space-between);
+  @include adaptive-value("gap", 50, 30);
+
+  &__img {
+    flex-grow: 1;
+    width: 55%;
+    &-item {
+      max-width: 100%;
+    }
+  }
+
+  &__desc {
+    width: 45%;
+    @include direction(column);
+    gap: 30px;
+  }
+
+  &__title {
+    @include adaptive-value("font-size", 32, 40);
+    margin-bottom: 10px;
+  }
+
+  &__cards {
+    @include direction(column);
+    gap: 20px;
+    justify-content: space-between;
+    // width: 42%;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 950px) {
+    @include direction(column);
+
+    &__img {
+      width: 100%;
+      @include flex(center, center);
+      &-item {
+        max-width: 100%;
+      }
+    }
+    &__desc {
+      width: 100%;
+    }
+  }
+}
+
+#working__section {
+  .working__section-icon {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .working__after-icon {
+    // left: 42px;
+    transform: translate(-60%, -90%);
+    @media (max-width: 1000px) {
+      display: none;
+    }
+    @media (max-width: 1350px) {
+      transform: translate(0, -90%);
+    }
+  }
+
+  .working__before-icon {
+    transform: translate(60%, -80%);
+    @media (max-width: 1350px) {
+      transform: translate(0, -80%);
+    }
+    @include adaptive-value("width", 157, 65);
+    @include adaptive-value("right", 20, 5);
+  }
+}
+
+.working {
+  margin: 80px 0;
+  @include flex(flex-start, space-between);
+  @include adaptive-value("gap", 50, 30);
+
+  &__desc {
+    width: 45%;
+    @include direction(column);
+    gap: 30px;
+  }
+
+  &__title {
+    @include adaptive-value("font-size", 32, 40);
+    margin-bottom: 10px;
+  }
+
+  &__cards {
+    @include direction(column);
+    gap: 20px;
+    justify-content: space-between;
+
+    &-icon {
+      margin-bottom: 16px;
+      width: 34px;
+      height: 34px;
+    }
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  &__gallery {
+    gap: 20px;
+    width: 60%;
+    @include direction(column);
+  }
+
+  &__img {
+    width: 100%;
+    &-item {
+      max-width: 100%;
+    }
+  }
+
+  &__collection {
+    @include flex(center, space-between);
+    gap: 20px;
+    width: 100%;
+    &-wrapper {
+      width: 50%;
+      border-radius: 20px;
+    }
+    &-item {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 1000px) {
+    @include direction(column);
+
+    &__gallery {
+      width: auto;
+      margin: 0 auto;
+      order: 1;
+    }
+
+    &__desc {
+      width: 100%;
+      order: 2;
+    }
+  }
+}
+
+.about__contact-title {
+  @include adaptive-value("font-size", 40, 32);
+}

@@ -1,0 +1,14 @@
+// MAIN
+@import "./mixins";
+@import "./normalize";
+@import "./variables";
+
+/*This style for pages of privacy and conditions*/
+
+.content {
+  @include specialPage();
+}
+
+.conditions {
+  @include pageBanner();
+}

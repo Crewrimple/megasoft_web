@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+.wrapper .main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*This style for pages of privacy and conditions*/
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  padding: 80px 0;
+}
+.content__title {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.content__text {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+}
+.content__theme {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  display: block;
+  margin-top: 10px;
+}
+
+.conditions {
+  padding: 85px 0 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.conditions__title {
+  color: #fff;
+  /* Header-2 Bold */
+  font-family: Outfit;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 133.333% */
+}
+@media (max-width: 1180px) {
+  .conditions__title {
+    font-size: calc(
+      30px + 30 *
+        ((100vw - 320px) / 860)
+    );
+  }
+}
+.conditions__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .conditions {
+    padding: 55px 0;
+  }
+}
+.conditions__icon {
+  font-size: 14px;
+}

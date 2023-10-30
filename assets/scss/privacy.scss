@@ -1,0 +1,13 @@
+// MAIN
+@import "./mixins";
+@import "./normalize";
+@import "./variables";
+/*Start here PRIVACY page styles*/
+
+.privacy {
+  @include pageBanner();
+}
+
+.content {
+  @include specialPage();
+}

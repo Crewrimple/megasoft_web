@@ -1,0 +1,124 @@
+// MAIN
+@import "./mixins";
+@import "./normalize";
+@import "./variables";
+
+/*Start here CONTACT page styles*/
+
+.contact-page {
+  @include pageBanner();
+}
+
+.connection {
+  &__wrapper {
+    @include flex(flex-end, space-between);
+    margin: 100px 0;
+    gap: 50px;
+  }
+
+  &__body {
+    @include direction(column);
+    width: 53%;
+    gap: 50px;
+  }
+
+  // &__desc {
+  // }
+
+  &__title {
+    @include adaptive-value("font-size", 40, 24);
+  }
+
+  // &__text {
+  // }
+  &__info {
+    &-title {
+      color: $whiteColor;
+      font-family: Outfit;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img-wrapper {
+    border-radius: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__location {
+    color: $whiteColor;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  .contact__details {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    .details__icons {
+      padding: 0 16px 0 0;
+      font-size: 18px;
+    }
+  }
+
+  &__form {
+    width: 45%;
+    @include flex(flex-end, flex-start);
+    border-radius: 16px;
+    border: 1px solid rgba(169, 174, 177, 0.2);
+    padding: 20px;
+  }
+  .contact__page-form {
+    @include direction(column);
+    width: 100%;
+  }
+  &__label {
+    margin-bottom: 5px;
+  }
+  &__input {
+    width: 100%;
+    padding: 16px 16px 14px 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--gray-gray-20, rgba(169, 174, 177, 0.2));
+    margin-bottom: 20px;
+    color: $whiteColor;
+    font-size: 16px;
+  }
+
+  &__message {
+    resize: none;
+  }
+
+  @media (max-width: 900px) {
+    &__wrapper {
+      margin: 50px 0;
+    }
+    &__wrapper {
+      @include direction(column);
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__body {
+      width: 100%;
+    }
+  }
+}

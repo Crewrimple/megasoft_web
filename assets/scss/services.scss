@@ -1,0 +1,24 @@
+// MAIN
+@import "./mixins";
+@import "./normalize";
+@import "./variables";
+
+/* Start here SERVICES page style*/
+
+.services-page {
+  @include pageBanner();
+}
+.services-page__items {
+  margin-bottom: 150px;
+}
+
+.services-page__after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 100%);
+  @include adaptive-value("width", 210, 90);
+  @media (max-width: 1350px) {
+    transform: translate(0%, 100%);
+  }
+}

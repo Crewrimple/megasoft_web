@@ -1,0 +1,118 @@
+// MIXINS
+// Flexbox include justify-content and align-items
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Flexbox direction
+@mixin direction($direct) {
+  display: flex;
+  flex-direction: $direct;
+
+  @if ($direct== "row") {
+    flex-wrap: wrap;
+  }
+}
+
+// Mixin for mediaquery
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// Positional mixin
+@mixin abs-position ($top, $right, $bottom, $left) {
+  position: absolute; 
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Mixin for adaptive content (Responsive)
+$maxWidth: 1140;
+$maxWidthContainer: 1180;
+@mixin adaptive-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+
+  #{$property}: $startSize + px;
+  @media (max-width:#{$maxWidthContainer + px}) {
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} *
+        ((100vw - 320px) / #{$maxWidthContainer - 320})
+    );
+  }
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Custum mixins for one site ===================================================================
+@mixin pageBanner() {
+  padding: 85px 0 70px 0;
+  @include direction(column);
+
+  &__title {
+    color: $whiteColor;
+    /* Header-2 Bold */
+    font-family: Outfit;
+    @include adaptive-value("font-size",60,30);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px; /* 133.333% */
+  }
+
+  &__links {
+    @include flex(center, unset);
+    gap: 10px;
+  }
+  @media (max-width: 900px) {
+    padding: 55px 0;
+  }
+
+  &__icon {
+    font-size: 14px;
+  }
+}
+
+@mixin specialPage() {
+  @include direction(column);
+  gap: 30px;
+  padding: 80px 0;
+
+  &__title {
+    color: $whiteColor;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__text {
+    color: $whiteColor;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+  }
+  &__theme {
+    color: $whiteColor;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
